@@ -1,0 +1,14 @@
+#!/usr/bin/env tclsh8.5
+
+# Interactivly build some flash cards
+#
+#     ./make-memquiz > quiz
+
+set first 1
+while {![eof stdin]} {
+	if {!$first} { puts %% } else { set first 0; }
+	puts -nonewline stderr {Front: }
+	gets stdin front
+	puts -nonewline stderr {Back: }
+	gets stdin back
+	puts "$front :: $back"}

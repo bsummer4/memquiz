@@ -1,0 +1,55 @@
+#!/usr/bin/env tclsh8.5
+
+set l [list]
+
+proc empty str { expr {![string length [string trim $str]]} }
+
+proc add {x y} {
+    lappend ::l [list [string trim $x] [string trim $y]] }
+
+proc quiz {} {}
+
+set in [open [lindex $argv 0]]
+
+set front [list]
+set back [list]
+set v front
+while {![eof $in]} {
+    gets $in line
+    switch -regexp -- $line {
+        :: { regexp {^([^:]*)::(.*)$} $line -- a b
+             if {[string equal $v back]} { set back "$back $line"; continue }
+             if {![empty $a]} { set front "$front [string trim $a]" }
+             if {![empty $b]} { set back "$back [string trim $b]" }
+             set v back
+             continue }
+        {^%%$} { set v front;
+                 add $front $back; 
+                 set front {};
+                 set back {}; 
+                 continue }
+        default { set $v "[set $v] $line" }}}
+
+set ::recent [list]
+set x [expr [llength $::l] / 3]
+proc getpair {} {
+	while 1 {
+		set index [expr "int(rand()*[llength $::l])"]
+		if {-1 == [lsearch -integer $::recent $index]} {
+			lappend ::recent $index
+			if {[llength $::recent] > $::x} {
+				set ::recent [lrange $::recent 1 end] }
+			break }
+		if {$::x > [llength $::recent]} { lappend ::recent $index; break }}
+	lindex $::l $index }
+
+proc newline {} { puts {} }
+proc bar {} { puts {==================}}
+
+while 1 {
+	set pair [getpair]
+	newline
+	newline; bar
+	puts [lindex $pair 0]
+	gets stdin
+	puts "    [lindex $pair 1]" }
