@@ -39,8 +39,7 @@ proc getpair {} {
 			lappend ::recent $index
 			if {[llength $::recent] > $::x} {
 				set ::recent [lrange $::recent 1 end] }
-			break }
-		if {$::x > [llength $::recent]} { lappend ::recent $index; break }}
+			break }}
 	lindex $::l $index }
 
 proc newline {} { puts {} }
