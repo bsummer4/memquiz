@@ -1,59 +1,29 @@
-ai
-::
-sigh
+ai :: sIGH
 %%
-oi
-::
-boy
+oi :: bOY
 %%
-au
-::
-how
+au :: hOW
 %%
-io
-::
-yo
+io :: YO
 %%
-i?
-::
-y?
+i?  :: y?
 %%
-u?
-::
-w?
+u?  :: w?
 %%
-c
-::
-sh
+c :: SH
 %%
-j
-::
-lojban
+j :: loJban
 %%
-g
-::
-gift
+g :: Gift
 %%
-s
-::
-sell
+s :: Sell
 %%
-x
-::
-bach
+x :: baCH
 %%
-r
-::
-normal; possibly trilled
+r :: normal; possibly trilled
 %%
-.
-::
-stop
+. :: a stop
 %%
-'
-::
-h
+' :: h
 %%
-,
-::
-no pronunciation; separates syllables that would normally run together.
+, :: not pronounced; hint to separate syllables
