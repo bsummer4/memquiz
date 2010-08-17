@@ -8,8 +8,17 @@ proc add {x y} {
     lappend ::l [list [string trim $x] [string trim $y]] }
 
 proc quiz {} {}
-
-set in [open [lindex $argv 0]]
+proc usage {} { puts stderr "Usage: $::argv0 card-spec"; exit 1 }
+switch [llength $argv] {
+	2 {
+		set infile [lindex $argv 1]
+		set reverse 1
+		if {![string equal -r [lindex $argv 0]]} usage }
+	1 {
+		set infile [lindex $argv 0]
+		set reverse 0 }
+	default usage }
+set in [open $infile]
 
 set front [list]
 set back [list]
@@ -40,7 +49,9 @@ proc getpair {} {
 			if {[llength $::recent] > $::x} {
 				set ::recent [lrange $::recent 1 end] }
 			break }}
-	lindex $::l $index }
+	set r [lindex $::l $index]
+	if {$::reverse} {return [lreverse $r]}
+	return $r }
 
 proc newline {} { puts {} }
 proc bar {} { puts {==================}}
