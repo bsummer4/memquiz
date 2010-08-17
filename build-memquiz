@@ -2,7 +2,19 @@
 
 # Interactivly build some flash cards
 #
-#     ./make-memquiz > quiz
+#     ; ./make-memquiz > quiz
+#     Front: This
+#     Back: That
+#     Front: Hi!
+#     Back: Bye!
+#     Front ^C
+#     ; cat quiz
+#     This :: That
+#     %%
+#     Hi! :: Bye!
+#     %%
+#     ;
+
 
 set first 1
 while {![eof stdin]} {

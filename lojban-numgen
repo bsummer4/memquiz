@@ -1,5 +1,7 @@
 #!/usr/bin/env tclsh8.5
 
+# Generates a bunch of lojban numbers whenever it gets a line from stdin.
+
 proc this {x} { return $x }
 proc digit {} {
 	lindex {no pa re ci vo mu xa ze bi so} [expr {int(rand()*10)}] }

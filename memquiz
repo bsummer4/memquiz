@@ -1,5 +1,16 @@
 #!/usr/bin/env tclsh8.5
 
+# Usage:
+#
+#     memquiz quiz-file
+#
+# How it works:
+#
+# 1. Show a question
+# 2. Wait for some input (any input)
+# 3. Show the answer
+# 4. goto 1
+
 set l [list]
 
 proc empty str { expr {![string length [string trim $str]]} }
