@@ -1,14 +1,6 @@
-re'azda :: house -- human dwelling
-%%
-patfu :: father
-%%
-mamta :: mother
-%%
-kabri :: cup
-%%
 .ie :: agree
 %%
-kurji :: To take care of
+kurji :: to take care of
 %%
 .ui :: Yay!
 %%
@@ -16,13 +8,13 @@ vu :: Tense: far away
 %%
 ba :: Tense: future
 %%
-pe'i :: Subjective -- I belive that...
+pe'i :: subjective -- I belive that __.
 %%
-ji'a :: Added weight
+ji'a :: with added weight
 %%
-za'a :: I directly observe that...
+za'a :: I directly observe that __.
 %%
-ru'a :: I postulate that...
+ru'a :: I postulate that __.
 %%
 kanro :: Is healthy
 %%
@@ -30,13 +22,13 @@ kanro :: Is healthy
 %%
 ku'i :: I say with contrast.
 %%
-pu :: Tense: Past
+pu :: Tense: past
 %%
-ca :: Tense: Present
+ca :: Tense: present
 %%
-vi :: Tense: Nearby
+vi :: Tense: nearby
 %%
-ku :: Ends a description sumti
+ku :: Disambiguates the end of a description sumti
 %%
 bridi :: sentence
 %%
@@ -58,9 +50,9 @@ tu :: that yonder
 %%
 zo'e :: unspecified sumti
 %%
-la :: the thing named ...
+la :: the thing named __
 %%
-le :: start of a description sumti
+le :: starts of a description sumti
 %%
 meris. :: Mary
 %%
@@ -98,7 +90,7 @@ go'i :: the main bridi of the previous sentence
 %%
 gismu :: a root word (type of brivla)
 %%
-lujvo :: compount word (type of brivla)
+lujvo :: compound word (type of brivla; built from gismu)
 %%
 fu'ivla :: borrowed word (type of brivla)
 %%
@@ -124,15 +116,15 @@ ni'oni'oni'o :: Completely new topic
 %%
 di'u :: The previous sentence
 %%
-la'e di'u :: The meaning of the previous sentence
+la'edi'u :: The meaning of the previous sentence
 %%
 coi :: hello
 %%
 co'o :: goodbye
 %%
-doi :: hey ...!
+doi :: Hey!  I'm talking to you __.
 %%
-ko :: same as do except it's a command word.
+ko :: Same as 'do' except turns the bridi into a command.
 %%
 ma :: sumti question
 %%
