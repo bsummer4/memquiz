@@ -2,7 +2,7 @@
 
 # Interactivly build some flash cards
 #
-#     ; ./make-memquiz > quiz
+#     ; ./build-memquiz > quiz
 #     Front: This
 #     Back: That
 #     Front: Hi!
@@ -15,12 +15,16 @@
 #     %%
 #     ;
 
+proc add {f b} {
+	if {[string length $f] && [string length $b]} {
+		puts "$f :: $b"; return 1 }
+	return 0 }
 
-set first 1
+set gotone 0
 while {![eof stdin]} {
-	if {!$first} { puts %% } else { set first 0; }
+	if {$gotone} { puts %% }
 	puts -nonewline stderr {Front: }
 	gets stdin front
 	puts -nonewline stderr {Back: }
 	gets stdin back
-	puts "$front :: $back"}
+	set gotone [add $front $back] }
