@@ -1,6 +1,6 @@
 #!/usr/bin/env tclsh8.5
 
-# Interactivly build some flash cards
+# Interactivly build a quiz.  Example usage:
 #
 #     ; ./build-memquiz > quiz
 #     Front: This
@@ -10,21 +10,16 @@
 #     Front ^C
 #     ; cat quiz
 #     This :: That
-#     %%
 #     Hi! :: Bye!
-#     %%
 #     ;
 
 proc add {f b} {
-	if {[string length $f] && [string length $b]} {
-		puts "$f :: $b"; return 1 }
-	return 0 }
+	if {![string length $f] || ![string length $b]} return
+	puts "$f :: $b" }
 
-set gotone 0
 while {![eof stdin]} {
-	if {$gotone} { puts %% }
 	puts -nonewline stderr {Front: }
 	gets stdin front
 	puts -nonewline stderr {Back: }
 	gets stdin back
-	set gotone [add $front $back] }
+	add $front $back }

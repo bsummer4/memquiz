@@ -1,136 +1,68 @@
 .ie :: agree
-%%
 kurji :: to take care of
-%%
 .ui :: Yay!
-%%
 vu :: Tense: far away
-%%
 ba :: Tense: future
-%%
 pe'i :: subjective -- I belive that __.
-%%
 ji'a :: with added weight
-%%
 za'a :: I directly observe that __.
-%%
 ru'a :: I postulate that __.
-%%
 kanro :: Is healthy
-%%
 .ei :: I say way with obligation
-%%
 ku'i :: I say with contrast.
-%%
 pu :: Tense: past
-%%
 ca :: Tense: present
-%%
 vi :: Tense: nearby
-%%
 ku :: Disambiguates the end of a description sumti
-%%
 bridi :: sentence
-%%
 sumti :: argument
-%%
 selbri :: relationship word
-%%
 brivla :: A single-word selbri
-%%
 mi :: me
-%%
 do :: you
-%%
 ti :: this
-%%
 ta :: that
-%%
 tu :: that yonder
-%%
 zo'e :: unspecified sumti
-%%
 la :: the thing named __
-%%
 le :: starts of a description sumti
-%%
 meris. :: Mary
-%%
 djan. :: John
-%%
 vecnu :: to sell
-%%
 tavla :: to talk
-%%
 sutra :: to be fast
-%%
 blari'o :: to be blue-green
-%%
 melbi :: to be beautiful
-%%
 cutci :: to be a shoe
-%%
 bajra :: to run
-%%
 klama :: to come/go
-%%
 pluke :: to please
-%%
 gerku :: to be a dog
-%%
 kurji :: to take care of
-%%
 kanro :: to be healthy
-%%
 stali :: to stay
-%%
 zarci :: to be a marketplace
-%%
 go'i :: the main bridi of the previous sentence
-%%
 gismu :: a root word (type of brivla)
-%%
 lujvo :: compound word (type of brivla; built from gismu)
-%%
 fu'ivla :: borrowed word (type of brivla)
-%%
 tanru :: a selbri build from several brivla
-%%
 se :: swap x1 and x2
-%%
 te :: swap x1 and x3
-%%
 ve :: swap x1 and x4
-%%
 xe :: swap x1 and x5
-%%
 cu :: Disambiguate the beginning of the selbri
-%%
 .i :: new sentence
-%%
 ni'o :: new topic
-%%
 ni'oni'o :: major topic change
-%%
 ni'oni'oni'o :: Completely new topic
-%%
 di'u :: The previous sentence
-%%
 la'edi'u :: The meaning of the previous sentence
-%%
 coi :: hello
-%%
 co'o :: goodbye
-%%
 doi :: Hey!  I'm talking to you __.
-%%
 ko :: Same as 'do' except turns the bridi into a command.
-%%
 ma :: sumti question
-%%
 mo :: selbri question
-%%
 xu :: Turns a bridi into a boolean question.
-%%
 na :: negate a bridi
-%%

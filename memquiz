@@ -12,9 +12,7 @@
 # 4. goto 1
 
 set l [list]
-
 proc empty str { expr {![string length [string trim $str]]} }
-
 proc add {x y} {
     lappend ::l [list [string trim $x] [string trim $y]] }
 
@@ -35,20 +33,8 @@ set front [list]
 set back [list]
 set v front
 while {![eof $in]} {
-    gets $in line
-    switch -regexp -- $line {
-        :: { regexp {^([^:]*)::(.*)$} $line -- a b
-             if {[string equal $v back]} { set back "$back $line"; continue }
-             if {![empty $a]} { set front "$front [string trim $a]" }
-             if {![empty $b]} { set back "$back [string trim $b]" }
-             set v back
-             continue }
-        {^%%$} { set v front;
-                 add $front $back; 
-                 set front {};
-                 set back {}; 
-                 continue }
-        default { set $v "[set $v] $line" }}}
+	if {![regexp {^([^:]*)::(.*)$} [gets $in] -- a b]} continue
+	add [string trim $a] [string trim $b] }
 
 set ::recent [list]
 set x [expr [llength $::l] / 3]
