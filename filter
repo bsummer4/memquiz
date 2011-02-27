@@ -1,0 +1,19 @@
+#!/bin/sh -e
+
+# Usage: ./filter wordlist definitions
+# Example: ./memquiz <(filter badwords lojban/words.ch2)
+
+[ "$#" = 2 ]
+
+t=$(mktemp)
+cat >$t <<'!'
+BEGIN {first=1; printf "^("}
+END {print ")"}
+!first {printf "|"}
+{printf "(" $1 ")"}
+{first=0}
+!
+
+regexp=$(awk -f $t <$1)
+rm $t
+egrep $regexp $2
