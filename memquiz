@@ -53,7 +53,7 @@ proc getpair {} {
 proc newline {} { puts {} }
 proc bar {} { puts {==================}}
 
-while 1 {
+while {![eof stdin]} {
 	set pair [getpair]
 	newline
 	newline; bar
